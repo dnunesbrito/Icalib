@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
+<interface>
+  <requires lib="gtk+" version="3.8"/>
+  <object class="GtkFileFilter" id="Blender">
+    <mime-types>
+      <mime-type>blender/dae</mime-type>
+    </mime-types>
+    <patterns>
+      <pattern>*.dae</pattern>
+    </patterns>
+  </object>
+  <object class="GtkFileFilter" id="Images">
+    <mime-types>
+      <mime-type>image/png</mime-type>
+      <mime-type>img/jpg</mime-type>
+      <mime-type>imge/bmp</mime-type>
+      <mime-type>image/eps</mime-type>
+    </mime-types>
+    <patterns>
+      <pattern>*.jpg</pattern>
+      <pattern>*.png</pattern>
+      <pattern>*.bmp</pattern>
+      <pattern>*.eps</pattern>
+    </patterns>
+  </object>
+  <object class="GtkFileFilter" id="Text">
+    <mime-types>
+      <mime-type>text/txt</mime-type>
+      <mime-type>text/doc</mime-type>
+    </mime-types>
+    <patterns>
+      <pattern>*.txt</pattern>
+      <pattern>*.doc</pattern>
+    </patterns>
+  </object>
+  <object class="GtkFileFilter" id="YAML">
+    <mime-types>
+      <mime-type>yaml/yml</mime-type>
+    </mime-types>
+    <patterns>
+      <pattern>*.yml</pattern>
+    </patterns>
+  </object>
+  <object class="GtkAccelGroup" id="accelgroup"/>
+  <object class="GtkActionGroup" id="actiongroup">
+    <property name="accel_group">accelgroup</property>
+  </object>
+  <object class="GtkAdjustment" id="adjEtapaGA">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjimgdiamstep">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjmaximgdiam">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjmaximgnoise">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjmaxtardiam">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjmaxtarnoise">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjminimgdiam">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjminimgnoise">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjmintardiam">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjmintarnoise">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjngen">
+    <property name="lower">10</property>
+    <property name="upper">100</property>
+    <property name="value">10</property>
+    <property name="step_increment">10</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjpopsize">
+    <property name="lower">10</property>
+    <property name="upper">100</property>
+    <property name="value">10</property>
+    <property name="step_increment">10</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjstepimgnoise">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjtardiamstep">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjtarnoisestep">
+    <property name="upper">100</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkImage" id="imgCalib">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">dialog-ok</property>
+  </object>
+  <object class="GtkImage" id="imgCancelGA">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">media-record</property>
+  </object>
+  <object class="GtkImage" id="imgGAset">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">applications-accessories</property>
+  </object>
+  <object class="GtkImage" id="imgLoadCalData">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">software-update-available</property>
+  </object>
+  <object class="GtkImage" id="imgOkGA">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">dialog-ok</property>
+  </object>
+  <object class="GtkImage" id="imgSearch1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">edit-find</property>
+  </object>
+  <object class="GtkImage" id="imgSearch2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">edit-find</property>
+  </object>
+  <object class="GtkImage" id="imgSearch3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">edit-find</property>
+  </object>
+  <object class="GtkImage" id="imgSearch4">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">edit-find</property>
+  </object>
+  <object class="GtkImage" id="imgbundleadj">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">software-update-urgent</property>
+  </object>
+  <object class="GtkImage" id="imgcleanfiles">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">edit-delete</property>
+  </object>
+  <object class="GtkImage" id="imgtraingulation">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">dialog-warning</property>
+  </object>
+  <template class="CalibAppWindow" parent="GtkApplicationWindow">
+    <property name="name">CalibApp</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Icalib</property>
+    <property name="window_position">center</property>
+    <property name="icon_name">camera-photo</property>
+    <child>
+      <object class="GtkGrid" id="grid">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="row_spacing">20</property>
+        <property name="column_spacing">3</property>
+        <child>
+          <object class="GtkLabel" id="lblcamfile">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Arquivo da câmera gerado pelo blende (.dae)</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">2</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entrcamfile">
+            <property name="name">camfile</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">3</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="chckbttntrue">
+            <property name="label" translatable="yes">Carregar dados reais</property>
+            <property name="name">chcktruedata</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_chckbttntrue_toggled" object="entrtranslation" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttncalib">
+            <property name="label" translatable="yes">Calibre</property>
+            <property name="name">BttnCalib</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgCalib</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="Message_end_calib" object="CalibAppWindow" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttncalib_clicked" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">4</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttncamfile">
+            <property name="label" translatable="yes">Procurar...</property>
+            <property name="name">camfile</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgSearch1</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="find_files" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entrtranslation">
+            <property name="name">translation</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">6</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttntranslationdata">
+            <property name="label" translatable="yes">Procurar...</property>
+            <property name="name">translation</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgSearch2</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="find_files" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbltranslationdata">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Arquivo contendo os dados de translação dos cubos (.yml)</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">5</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttnLoadCalibData">
+            <property name="label" translatable="yes">Carrega dados calibração</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgLoadCalData</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="bttbundeladj" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="bttncalib" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="bttntriangulation" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="chckbttnalltar" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="chckbttnlinlsq" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="chckbttntrue" swapped="no"/>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="entrRRtFileName" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="entrcamfile" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttnLoadCalibData_clicked" object="entrtranslation" after="yes" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">3</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entrconfigfilename">
+            <property name="name">configfile</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">8</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblconfig">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Arquivo contendo dados de configuração (.yml)</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">7</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttnconfigfile">
+            <property name="label" translatable="yes">Procurar...</property>
+            <property name="name">configfile</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgSearch3</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="find_files" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">8</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entrRRtFileName">
+            <property name="name">rrtfilename</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">9</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttnRRtFileName">
+            <property name="label" translatable="yes">Procurar...</property>
+            <property name="name">rrtfilename</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgSearch4</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="find_files" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">9</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="chckbttnalltar">
+            <property name="label" translatable="yes">Cria novos Pixel e TransData </property>
+            <property name="name">chckbttnalltar</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblTitle">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Programa para calibração de câmeras</property>
+            <property name="angle">0.01</property>
+            <attributes>
+              <attribute name="font-desc" value="Century Schoolbook L Bold 19"/>
+              <attribute name="foreground" value="#cccc00000000"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">1</property>
+            <property name="width">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttbundeladj">
+            <property name="label" translatable="yes">   Bundle adjustment</property>
+            <property name="name">bttbundeladj</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgbundleadj</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="Message_end_calib" object="CalibAppWindow" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttbundeladj_clicked" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">5</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="chckbttnlinlsq">
+            <property name="label" translatable="yes">Executa IniTsai</property>
+            <property name="name">chckbttnlinlsq</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_chckbttnlin_lsq_toggled" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttntriangulation">
+            <property name="label" translatable="yes">Triangulation</property>
+            <property name="name">bttntriangulation</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgtraingulation</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="Message_end_calib" object="CalibAppWindow" after="yes" swapped="no"/>
+            <signal name="clicked" handler="on_bttntriangulation_clicked" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">6</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="GAoptmiset">
+            <property name="label" translatable="yes">Configuração GA</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgGAset</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="on_GAoptmiset_clicked" object="CalibAppWindow" swapped="no"/>
+            <signal name="clicked" handler="on_GAoptmiset_open_window" object="GAset" after="yes" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">7</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkMenuBar" id="mnbr">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkMenuItem" id="mnitmfile">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">_Arquivo</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="mnexit">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem5">
+                        <property name="label">gtk-quit</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="mnitmedit">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">_Editar</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkMenuItem" id="mnitmconfgopt">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Configuração otimização</property>
+                        <signal name="activate" handler="on_mnitmconfgopt_activate" object="CalibAppWindow" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="mnitmconfgnoisediam">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Configuração Ruído/Diâmetro</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_mnitmconfgnoisediam_activate" object="CalibAppWindow" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="mnitmhelp">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Aj_uda</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="mnabout">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem10">
+                        <property name="label">gtk-about</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="bttncleanfiles">
+            <property name="label" translatable="yes">Limpar arquivos de dados</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">imgcleanfiles</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="on_bttncleanfiles_clicked" object="CalibAppWindow" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">8</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </template>
+  <object class="GtkWindow" id="GAset">
+    <property name="name">GASet</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">GA calib set</property>
+    <property name="window_position">center</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="transient_for">CalibAppWindow</property>
+    <child>
+      <object class="GtkBox" id="box1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">11</property>
+        <child>
+          <object class="GtkScrolledWindow" id="scrlldwinGAset">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="margin_bottom">101</property>
+            <property name="min_content_width">500</property>
+            <property name="min_content_height">200</property>
+            <child>
+              <object class="GtkTreeView" id="treeviewGAset">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="search_column">1</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="treeview-selection2"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="trvclCameraID">
+                    <property name="title" translatable="yes">CameraID</property>
+                    <property name="sort_column_id">0</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cellrdrtxtCameraID"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="trvclTargetID">
+                    <property name="title" translatable="yes">TargetID</property>
+                    <property name="sort_column_id">1</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cellrdrtxtTargetID"/>
+                      <attributes>
+                        <attribute name="text">1</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="trvclpopsize">
+                    <property name="title" translatable="yes">popsize</property>
+                    <property name="sort_column_id">3</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="trvclngen">
+                    <property name="title" translatable="yes">ngen</property>
+                    <property name="sort_column_id">4</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <object class="GtkButtonBox" id="buttonbox1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="bttnokGA">
+                <property name="label" translatable="yes">Ok</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgOkGA</property>
+                <property name="always_show_image">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="bttnCancelGA">
+                <property name="label" translatable="yes">Cancela</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgCancelGA</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="on_bttnCancelGA_clicked" object="GAset" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkFileChooserDialog" id="filechooserdlg">
+    <property name="can_focus">False</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">CalibAppWindow</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="filechooserdialog-vbox1">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="filechooserdialog-action_area1">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="mssgdlg">
+    <property name="can_focus">False</property>
+    <property name="type_hint">normal</property>
+    <property name="transient_for">CalibAppWindow</property>
+    <property name="text" translatable="yes">Programa em execução</property>
+    <property name="secondary_text" translatable="yes">Favor não deligar</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="messagedialog-vbox">
+        <property name="name">mssgnaodesligar</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="messagedialog-action_area">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkListStore" id="liststoreIDs">
+    <columns>
+      <!-- column-name ID -->
+      <column type="gchararray"/>
+      <!-- column-name conlunidx -->
+      <column type="gint"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">cellrdrtxtCameraID</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">cellrdrtxtTargetID</col>
+        <col id="1">1</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">cellrdrspinpopsize</col>
+        <col id="1">3</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">cellrdrspinngen</col>
+        <col id="1">4</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">cellrdrspinEtapa</col>
+        <col id="1">2</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="liststorecolname">
+    <columns>
+      <!-- column-name colnames -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Iterations</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">MaxBranches</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Eps</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">RaiseFactor</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">HeuristicExpansioFactor</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">MaxIter</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">RRtFromFile</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">UseSolListFile</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Dellistfolder</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Initfixtxty</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">repeatsamedata</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">BranchLevels</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">popsize</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">ngen</col>
+      </row>
+    </data>
+  </object>
+</interface>

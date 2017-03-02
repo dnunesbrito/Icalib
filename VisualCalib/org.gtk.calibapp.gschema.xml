@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gtk/calibapp/" id="org.gtk.calibapp">
+    <key name="configfilename" type="s">
+      <default>'ConfigFile.yml'</default>
+      <summary>File</summary>
+      <description>The optmization configruation file.</description>
+    </key>
+    <key name="camfile" type="s">
+      <default>'FourCubesThreeCams.dae'</default>
+      <summary>file</summary>
+      <description>The camera file.</description>
+    </key>
+    <key name="translation" type="s">
+      <default>'CalibData.yml'</default>
+      <summary>file</summary>
+      <description>The camera translation data file.</description>
+    </key>
+    <key name="rrtfilename" type="s">
+      <default>'RRt.yml'</default>
+      <summary>file</summary>
+      <description>The camera translation and translation matrix.</description>
+    </key>
+    <key name="imgminnoise" type="d">
+      <default>0</default>
+      <summary>imgminnoise</summary>
+      <description>The min noise added on image.</description>
+    </key>
+    <key name="imgmaxnoise" type="d">
+      <default>0</default>
+      <summary>imgmaxnoise</summary>
+      <description>The max noise added on image.</description>
+    </key>
+    <key name="imgnoisestep" type="d">
+      <default>0</default>
+      <summary>imgnoisestep</summary>
+      <description>The step to noise added on image.</description>
+    </key>
+    <key name="tarminnoise" type="d">
+      <default>0</default>
+      <summary>tarminnoise</summary>
+      <description>The minimum noise added on target location.</description>
+    </key>
+    <key name="tarmaxnoise" type="d">
+      <default>0</default>
+      <summary>tarmaxnoise</summary>
+      <description>The maximum noise added on target location.</description>
+    </key>
+    <key name="tarnoisestep" type="d">
+      <default>0</default>
+      <summary>tarnoisestep</summary>
+      <description>The step to noise added on target location.</description>
+    </key>
+    <key name="chcktruedata" type="b">
+      <default>false</default>
+      <summary>usetruedata</summary>
+      <description>Must be used true data?.</description>
+    </key>
+    <key name="chckbttnalltar" type="b">
+      <default>false</default>
+      <summary>usetruedata</summary>
+      <description>Must be used true data?.</description>
+    </key>
+    <key name="chckbttnlinlsq" type="b">
+      <default>false</default>
+      <summary>lin_or_lsq</summary>
+      <description>Must be used least square or linear method?</description>
+    </key>
+    <key name="imgmindiam" type="d">
+      <default>0</default>
+      <summary>imgminnoise</summary>
+      <description>The min noise added on image.</description>
+    </key>
+    <key name="imgmaxdiam" type="d">
+      <default>0</default>
+      <summary>imgmaxnoise</summary>
+      <description>The max noise added on image.</description>
+    </key>
+    <key name="imgdiamstep" type="d">
+      <default>0</default>
+      <summary>imgnoisestep</summary>
+      <description>The step to noise added on image.</description>
+    </key>
+    <key name="tarmindiam" type="d">
+      <default>0</default>
+      <summary>tarminnoise</summary>
+      <description>The minimum noise added on target location.</description>
+    </key>
+    <key name="tarmaxdiam" type="d">
+      <default>0</default>
+      <summary>tarmaxnoise</summary>
+      <description>The maximum noise added on target location.</description>
+    </key>
+    <key name="tardiamstep" type="d">
+      <default>0</default>
+      <summary>tarnoisestep</summary>
+      <description>The step to noise added on target location.</description>
+    </key>
+  </schema>
+</schemalist>

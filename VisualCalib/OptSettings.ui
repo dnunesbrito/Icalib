@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
+<interface>
+  <requires lib="gtk+" version="3.10"/>
+  <object class="GtkAction" id="action_quit"/>
+  <object class="GtkAdjustment" id="adjBranchLevels">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjEtapa">
+    <property name="upper">1</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjMaxIter">
+    <property name="upper">10000000</property>
+    <property name="step_increment">1000</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">1000</property>
+    <property name="value">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment2">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment3">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkListStore" id="liststore">
+    <columns>
+      <!-- column-name CameraID -->
+      <column type="gchararray"/>
+      <!-- column-name TargetID -->
+      <column type="gchararray"/>
+      <!-- column-name Iterations -->
+      <column type="gint"/>
+      <!-- column-name MaxBranches -->
+      <column type="gint"/>
+      <!-- column-name Eps -->
+      <column type="gdouble"/>
+      <!-- column-name RaiseFactor -->
+      <column type="gdouble"/>
+      <!-- column-name HeuristicExpandFactor -->
+      <column type="gdouble"/>
+      <!-- column-name DelListFolder -->
+      <column type="gboolean"/>
+      <!-- column-name Initfixtxty -->
+      <column type="gboolean"/>
+      <!-- column-name RepeatCalSameData -->
+      <column type="gboolean"/>
+      <!-- column-name MaxIter -->
+      <column type="gint"/>
+      <!-- column-name RRtFromFile -->
+      <column type="gboolean"/>
+      <!-- column-name UseSolListFile -->
+      <column type="gboolean"/>
+      <!-- column-name BranchLevels -->
+      <column type="gint"/>
+      <!-- column-name Etapa -->
+      <column type="gint"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Camera</col>
+        <col id="1" translatable="yes">Cube</col>
+        <col id="2">100</col>
+        <col id="3">0</col>
+        <col id="4">0</col>
+        <col id="5">0</col>
+        <col id="6">0</col>
+        <col id="7">False</col>
+        <col id="8">False</col>
+        <col id="9">False</col>
+        <col id="10">0</col>
+        <col id="11">False</col>
+        <col id="12">False</col>
+        <col id="13">0</col>
+        <col id="14">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Camera_001</col>
+        <col id="1" translatable="yes">Cube</col>
+        <col id="2">100</col>
+        <col id="3">0</col>
+        <col id="4">0</col>
+        <col id="5">0</col>
+        <col id="6">0</col>
+        <col id="7">False</col>
+        <col id="8">False</col>
+        <col id="9">False</col>
+        <col id="10">0</col>
+        <col id="11">False</col>
+        <col id="12">False</col>
+        <col id="13">0</col>
+        <col id="14">0</col>
+      </row>
+    </data>
+  </object>
+  <template class="OptSettings" parent="GtkDialog">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Configuração de otimização</property>
+    <property name="window_position">center</property>
+    <property name="default_width">1280</property>
+    <property name="default_height">600</property>
+    <property name="type_hint">normal</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="dialog-vbox1">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">20</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="dialog-action_area1">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="bttn_ok">
+                <property name="label" translatable="yes">Ok</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="on_bttn_cancel_clicked" object="OptSettings" swapped="no"/>
+                <signal name="clicked" handler="on_bttn_ok_clicked" object="OptSettings" after="yes" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="pack_type">end</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="bttn_cancel">
+                <property name="label" translatable="yes">Cancel</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="on_bttn_cancel_clicked" object="OptSettings" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolledwindow">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <property name="min_content_width">9</property>
+            <property name="min_content_height">600</property>
+            <child>
+              <object class="GtkTreeView" id="treeview">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">liststore</property>
+                <property name="ubuntu_almost_fixed_height_mode">True</property>
+                <property name="enable_grid_lines">both</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="treeview-selection1"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="CameraIDColumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">CameraID</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="CamIDrenderertext">
+                        <property name="editable">True</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="CameraIDColumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="TargetIDcolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">TargetID</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="TarIDrenderertext">
+                        <property name="editable">True</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="TargetIDcolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">1</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="iterationscolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">Iterations</property>
+                    <property name="clickable">True</property>
+                    <child>
+                      <object class="GtkCellRendererSpin" id="iterrendererspin">
+                        <property name="editable">True</property>
+                        <property name="adjustment">adjustment1</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="iterationscolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">2</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="maxbranchcolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">MaxBranches</property>
+                    <property name="clickable">True</property>
+                    <child>
+                      <object class="GtkCellRendererSpin" id="maxbrrdrspin">
+                        <property name="editable">True</property>
+                        <property name="adjustment">adjustment1</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="maxbranchcolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">3</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="epscolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">Eps</property>
+                    <property name="clickable">True</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="epsrdspin">
+                        <property name="editable">True</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="epscolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">4</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="raisfaccolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">RaiseFactor</property>
+                    <property name="clickable">True</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="raisfacrdtext">
+                        <property name="editable">True</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="raisfaccolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">5</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="heuristcolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">HeuristicExpansionFactor</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="Heurdrtext">
+                        <property name="editable">True</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="heuristcolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">6</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="DelListFoldercolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">List folder (Del)</property>
+                    <child>
+                      <object class="GtkCellRendererToggle" id="DelLFoldrdrtgg">
+                        <signal name="toggled" handler="on_renderer_bool_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="toggled" handler="on_renderer_bool_editedSel" object="DelListFoldercolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="active">7</attribute>
+                        <attribute name="radio">7</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="Initfixtxtycolumn">
+                    <property name="title" translatable="yes">Tx e Ty fixos</property>
+                    <child>
+                      <object class="GtkCellRendererToggle" id="fixtxtyrdrtgg">
+                        <signal name="toggled" handler="on_renderer_bool_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="toggled" handler="on_renderer_bool_editedSel" object="Initfixtxtycolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="active">8</attribute>
+                        <attribute name="radio">8</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="repeatsdcolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">Rep. Dad. =</property>
+                    <child>
+                      <object class="GtkCellRendererToggle" id="repeatsamedatrdrtgg">
+                        <signal name="toggled" handler="on_renderer_bool_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="toggled" handler="on_renderer_bool_editedSel" object="repeatsdcolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="active">9</attribute>
+                        <attribute name="radio">9</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="MaxItercolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">MaxIter</property>
+                    <property name="clickable">True</property>
+                    <child>
+                      <object class="GtkCellRendererSpin" id="MaxIterrdrspin">
+                        <property name="editable">True</property>
+                        <property name="adjustment">adjMaxIter</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="MaxItercolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">10</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="RRtFromFilecolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">RRtFromFile</property>
+                    <property name="clickable">True</property>
+                    <child>
+                      <object class="GtkCellRendererToggle" id="RRtFFrdrtgg">
+                        <signal name="toggled" handler="on_renderer_bool_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="toggled" handler="on_renderer_bool_editedSel" object="RRtFromFilecolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="active">11</attribute>
+                        <attribute name="radio">11</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="UseSolListFilecolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">UseSolListFile</property>
+                    <property name="clickable">True</property>
+                    <child>
+                      <object class="GtkCellRendererToggle" id="UseSolListFilerdrtgg">
+                        <signal name="toggled" handler="on_renderer_bool_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="toggled" handler="on_renderer_bool_editedSel" object="UseSolListFilecolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="active">12</attribute>
+                        <attribute name="radio">12</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="BranchLevelcolumn">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">BranchLevel</property>
+                    <property name="clickable">True</property>
+                    <child>
+                      <object class="GtkCellRendererSpin" id="BranchLevelsrdrspin">
+                        <property name="editable">True</property>
+                        <property name="adjustment">adjBranchLevels</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" after="yes" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="BranchLevelcolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">13</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="Etapacolumn">
+                    <property name="title" translatable="yes">Etapa</property>
+                    <child>
+                      <object class="GtkCellRendererSpin" id="Eetapardrspin">
+                        <property name="editable">True</property>
+                        <property name="adjustment">adjEtapa</property>
+                        <signal name="edited" handler="on_renderer_edited" object="liststore" swapped="no"/>
+                        <signal name="edited" handler="on_renderer_editedSel" object="Etapacolumn" swapped="no"/>
+                      </object>
+                      <attributes>
+                        <attribute name="text">14</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblnrows">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Número de linhas da tabela</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="spnbttn_rowconftab">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="input_purpose">number</property>
+            <property name="adjustment">adjustment3</property>
+            <property name="numeric">True</property>
+            <signal name="output" handler="on_spnbttn_rowconftab_output" object="liststore" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </template>
+  <object class="GtkListStore" id="liststorecolname">
+    <columns>
+      <!-- column-name colname -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">CameraID</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">TargetID</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Iterations</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">MaxBranches</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Eps</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">RaiseFactor</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">HeuristicExpansioFactor</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Dellistfolder</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Initfixtxty</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">repeatsamedata</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">MaxIter</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">RRtFromFile</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">UseSolListFile</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">BranchLevels</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Etapa</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">popsize</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">ngen</col>
+      </row>
+    </data>
+  </object>
+</interface>
